@@ -52,7 +52,10 @@ export const WalletProvider = ({ children = null as any }) => {
   useEffect(() => {
     if (walletType) {
       const option= SUPPORTED_WALLETS[walletType]
-      if (option?.connector) connect(option.connector, walletType)
+      if (option?.connector) {
+        connect(option.connector, walletType)
+        activate(option.connector, undefined, true)
+      }
     }
   }, [connect, activate, walletType])
 

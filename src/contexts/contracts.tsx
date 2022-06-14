@@ -23,7 +23,7 @@ export const ContractProvider = ({ children = null as any }) => {
   )
 
   useEffect(() => {
-    const web3Obj = new Web3(library?.provider || ProviderUrl[config.networkId])
+    const web3Obj = new Web3(Web3.givenProvider);
     setWeb3(web3Obj)
     setVotingFactoryContract(
       new web3Obj.eth.Contract(ABI.votingFactoryAbi as any, VotingFactoryAddress[config.networkId])

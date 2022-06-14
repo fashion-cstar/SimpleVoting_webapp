@@ -45,7 +45,7 @@ function App() {
                   <Header />
                   <Switch>
                     <Route exact path="/" component={VotingPolls} />
-                    <Route exact path="/:voteId" component={VotingDetail} />
+                    <Route path="/:voteId" component={VotingDetail} />
                     <Redirect to="/" />
                   </Switch>
                 </div>
