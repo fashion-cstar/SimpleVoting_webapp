@@ -56,9 +56,7 @@ export const Detail = ({ pollId }: { pollId: number }) => {
     const fetch = async () => {
       if (info) setPollInfo(await updatePollInfo(info))
     }
-    setLoading(true)
     fetch()
-    setLoading(false)
   }, [info])
 
   const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
