@@ -41,18 +41,6 @@ const PollItem: React.FC<IVotingItem> = ({ index, info }) => {
       <TableCell style={{ textAlign: 'right', fontSize:'16px' }}>{(index + 1)}</TableCell>
       <TableCell style={{ textAlign: 'center', fontSize:'16px' }}>{info.title}</TableCell>
       <TableCell style={{ textAlign: 'center', fontSize:'16px' }}>{getShortWalletAddress(info.pollContract.address)}</TableCell>
-      {/* <TableCell
-        className='flex justify-between items-center'
-        style={{ textAlign: 'left' }}
-      >
-        {
-          info.options.map((option: OptionInfo, index) => {
-            return (
-              <p className='my-2 text-[16px]' key={index}>{option.name}</p>
-            )
-          })
-        }
-      </TableCell> */}
     </TableRow>
   )
 }
@@ -102,9 +90,6 @@ export const VotingPollsTable = () => {
               <TableCell style={{ textAlign: 'center' }}>
                 <b>Poll Address</b>
               </TableCell>
-              {/* <TableCell style={{ textAlign: 'left' }}>
-                <b>Options</b>
-              </TableCell> */}
             </TableRow>
           </TableHead>
 

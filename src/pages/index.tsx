@@ -7,7 +7,6 @@ import {
   useLocation,
 } from 'react-router-dom'
 import { VotingDetail } from './Detail/index'
-import { Tab, Tabs } from '@material-ui/core'
 import { VotingPolls } from './HomePage'
 
 export const Page = () => {
