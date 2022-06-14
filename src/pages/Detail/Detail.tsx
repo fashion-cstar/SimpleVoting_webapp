@@ -64,7 +64,9 @@ export const Detail = ({ pollId }: { pollId: number }) => {
   };
 
   useEffect(() => {
+    setLoading(true)
     setInfo(votingPollList.find((item) => item.pollId === pollId))
+    setLoading(false)
   }, [pollId, votingPollList])
 
   return (
